@@ -6,6 +6,5 @@ end
 
 use Rack::MethodOverride
 use InvestmentController
-use SessionController
 use UserController
 run ApplicationController

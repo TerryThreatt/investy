@@ -11,7 +11,6 @@
         - Investment
     - Controllers
         - ApplicationController
-        - SessionController
         - UserController
         - InvesmentController
     - Views
