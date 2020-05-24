@@ -24,7 +24,7 @@
     [x] Include atleast two models: User & Investment models
     [x] Include atleast one has_many relationship: User has_many Investments
     [x] Include atleast one belongs_to relationship: Investment belongs_to User
-    [] Include user account with unique login attribute (username | password)
+    [x] Include user account with unique login attribute (username | password)
     [] Belongs_to resource has full crud routes
     [] Users can't modify other users content
     [x] User input validations

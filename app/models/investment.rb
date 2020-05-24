@@ -1,3 +1,4 @@
 class Investment < ActiveRecord::Base
-    belongs_to :user 
+    validates :name, :date, :amount, :kind, :user_id presence: true
+    belongs_to :user
 end
