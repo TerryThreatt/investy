@@ -1,0 +1,8 @@
+<h1> Investments </h1>
+
+<ul>
+    <% @investments.each do |i| %>
+        <li><a href="/investments"><%= i.name %></a></li>
+    <% end %>
+
+</ul>
