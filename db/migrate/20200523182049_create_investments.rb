@@ -5,7 +5,7 @@ class CreateInvestments < ActiveRecord::Migration
       t.date :date
       t.integer :amount
       t.text :description
-      t.string :type
+      t.string :kind
       t.integer :user_id
       t.timestamps
     end
