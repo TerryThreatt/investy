@@ -48,6 +48,25 @@ class UserController < ApplicationController
         end
     end
     # update user
-    
-    # delete user
+    get "/account" do
+        redirect "/" if !is_logged_in?
+        @user = current_user
+        erb :"/users/show"
+      end
+
+      get "/account/edit" do
+        redirect "/" if !is_logged_in?
+        @user = current_user
+        erb :"users/edit"
+      end
+
+      patch '/account/edit' do
+        @user = current_user
+        @user.name = params[:first_name]
+        @user.email = params[:email]
+        @user.password = params[:password]
+        @user.save
+        redirect '/account'
+      end
+
 end
