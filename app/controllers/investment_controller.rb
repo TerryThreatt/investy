@@ -51,11 +51,11 @@ class InvestmentController < ApplicationController
         @investment.amount = params[:amount]
         @investment.kind = params[:kind]
         @investment.description = params[:description]
+        @investment.update(params.except(:_method))
         if @investment.save
-          redirect to "/investments/#{params[:id]}"
+            redirect to "/investments/#{@investment.id}"
         else
-        #   flash[:danger] = "Please try again."
-          redirect to "/investments/#{params[:id]}/edit"
+            redirect to "/investments/#{params[:id]}/edit"
         end
       end
 
