@@ -1,8 +1,7 @@
 class InvestmentController < ApplicationController
 
-    # create investments
     get "/investments/new" do
-        redirect "/" if !is_logged_in?
+        validation
         erb :"/investments/new"
     end
 
@@ -16,16 +15,53 @@ class InvestmentController < ApplicationController
         end
     end
 
-    # read investments
     get "/investments" do
+        validation
         user = current_user
         @investments = user.investments.all
 
         erb :"/investments/index"
     end
 
-    # update investments
+    get "/investments/:id" do
+        validation
+        @investment = current_user.investments.find(params[:id])
+        if @investment
+            erb :"investments/show"
+        else
+            redirect to "/investments"
+        end
+    end
 
-    # delete investments
+    get "/investments/:id/edit" do
+        validation
+        @investment = current_user.investments.find(params[:id])
+        if @investment
+            erb :"investments/edit"
+        else
+            redirect to "/investments"
+        end
+    end
+
+    patch "/investments/:id/edit" do
+        validation
+        @investment = current_user.investments.find(params[:id])
+        @investment.name = params[:name]
+        @investment.date = params[:date]
+        @investment.amount = params[:amount]
+        @investment.kind = params[:kind]
+        @investment.description = params[:description]
+        if @investment.save
+          redirect to "/investments/#{params[:id]}"
+        else
+        #   flash[:danger] = "Please try again."
+          redirect to "/investments/#{params[:id]}/edit"
+        end
+      end
+
+    delete "/investments/:id/delete" do
+        current_user.investments.find(params[:id]).delete
+        redirect to "/investments"
+    end
 
 end

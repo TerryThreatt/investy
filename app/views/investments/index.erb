@@ -2,13 +2,13 @@
 
 <ul>
     <% @investments.each do |i| %>
-        <li><a href="/investments"><%= i.name %></a></li>
+        <li><a href="/investments/<%= i.id %>"><%= i.name %>|<%= i.amount%></a></li>
     <% end %>
 
 </ul>
 <br>
 <a href="/investments/new">Add Investment</a>
 <br>
-<a href="/account">View account</a>
+<a href="/account">Account</a>
 <br>
-<a href="/logout">Log Out</a> 
+<a href="/logout">Log Out</a>

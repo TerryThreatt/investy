@@ -1,0 +1,11 @@
+<h1><a><%= @investment.name %> details</a></h1>
+		<form action="/investments/<%=@investment.id%>/edit" method="POST">
+  		    <input type="hidden" name="_method" id="hidden" value="PATCH">
+                Name: <input type="text" name="name" value="<%= @investment.name %>"> <br>
+                Kind: <input type="text" name="kind" value="<%= @investment.kind %>"> <br>
+                Date: <input type="date" name="date" value="<%= @investment.date %>"> <br>
+                Amount: <input type="number" name="number" value="<%= @investment.amount %>"> <br>
+                Description: <input type="text" name="description" value="<%= @investment.description %>"> <br>
+
+                <input type="submit" value="Update">
+		</form>

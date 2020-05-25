@@ -49,13 +49,13 @@ class UserController < ApplicationController
     end
     # update user
     get "/account" do
-        redirect "/" if !is_logged_in?
+        validation
         @user = current_user
         erb :"/users/show"
       end
 
       get "/account/edit" do
-        redirect "/" if !is_logged_in?
+        validation
         @user = current_user
         erb :"users/edit"
       end
