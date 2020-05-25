@@ -34,7 +34,7 @@ class UserController < ApplicationController
             session[:user_id] = user.id
             redirect to "/investments"
         else
-            redirect to "/signup"
+            redirect to "/login"
         end
     end
 

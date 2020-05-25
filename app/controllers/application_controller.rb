@@ -13,6 +13,7 @@ class ApplicationController < Sinatra::Base
     erb :welcome
   end
 
+  # keep the code dry
   helpers do
 
     def is_logged_in?
