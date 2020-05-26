@@ -1,11 +1,18 @@
-<h3>Update Account Info:</h3>
+  <br>
+  <br>
+<h2>Update Account</h2>
+<small>Enter any new account details to update.</small>
+  <br>
+  <br>
 <form action="/account/edit" method="POST">
 <input type="hidden" name="_method" id="hidden" value="PATCH">
-  <input type="text" name="name" placeholder="Name" value="<%= @user.name %>">
+  <div class="form-group">
+  <input type="text" class="form-control" name="name" placeholder="Name" value="<%= @user.name %>">
   <br>
-  <input type="email" name="email" placeholder="Email" value="<%= @user.email %>">
+  <input type="email" class="form-control" name="email" placeholder="Email" value="<%= @user.email %>">
   <br>
-  <input type="password" name="password" placeholder="Password" value="<%= @user.password %>">
-  <br>
-  <input type="submit" id="submit" value="Update Account" class="btn btn-secondary">
+  <input type="password" class="form-control" name="password" placeholder="Password" value="<%= @user.password %>">
+    <br>
+  <input type="submit" id="submit" value="Update" class="btn btn-primary">
+  </div>
 </form>

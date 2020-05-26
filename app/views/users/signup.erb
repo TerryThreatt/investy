@@ -1,10 +1,16 @@
-<h1> Sign Up </h1>
+<h3> Sign Up </h3>
 
 <form action="/signup" method="POST">
-    Name: <input type="text" id="name" name="name" placeholder="Name">
-    Email: <input type="email" id="email" name="email" placeholder="Email">
-    Password: <input type="password" id="password" name="password" placeholder="Password">
+    <div class="form-group text-center">
+    <input type="text" class="form-control" id="name" name="name" placeholder="Name">
+    <small class="text-center">Ex: John Smith</small>
     <br>
+    <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+    <small>Ex: Email@email.com</small>
     <br>
-    <input type="submit" id="submit" value="Sign Up">
+    <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+    <small>Ex: Greater than 6 characters</small>
+    </div>
+    <br>
+    <input type="submit" id="submit" value="Sign Up" class="btn btn-primary">
 </form>

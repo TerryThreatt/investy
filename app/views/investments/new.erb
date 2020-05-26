@@ -1,17 +1,22 @@
-<h1>Add New Investment</h1>
+<br>
+<br>
+<h2>Add New Investment</h2>
 <form action="/investments" method="POST">
-    Name: <input type="text" id="investment_name" name="name"  placeholder="Name" >
-    Date: <input type="date" id="investment_date" name="date"  placeholder="Date" >
-    Amount: <input type="number" id="investment_amount" name="amount"  placeholder="Amount" >
-    Description: <input type="text" id="investment_description" name="description"  placeholder="Optional" >
-    Investment Type: <input type="text" id="investment_kind" name="kind"  placeholder="Type of Investment" >
-    <input type="submit" value="Add">
+    <div class="form-group text-left">
+    <input type="text" class="form-control" id="investment_name" name="name"  placeholder="Name" >
+    <br>
+    <input type="date" class="form-control" id="investment_date" name="date"  placeholder="Date" >
+    <br>
+    <input type="number" class="form-control" id="investment_amount" name="amount"  placeholder="Amount: $" >
+    <br>
+    <select class="form-control" id="investment_kind" name="kind">
+        <option value="Stock">Stock</option>
+        <option value="Real Estate">Real Estate</option>
+        <option value="Equity">Equity</option>
+        <option value="Other">Other</option>
+    </select>
+    <br>
+    <textarea  class="form-control" id="investment_description" name="description" placeholder="Description: Optional"></textarea>
+    </div>
+    <input type="submit" value="Add" class="btn btn-primary">
 </form>
-
-<a href="/investments">View Investments</a>
-<br>
-<a href="/">Home</a>
-<br>
-<a href="/account">Account</a>
-<br>
-<a href="/logout">Log Out</a>

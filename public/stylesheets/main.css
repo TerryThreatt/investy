@@ -16,7 +16,7 @@
     color: #01EAAB;
   }
 
-  a:hover, a:active {
+  a:active, a:hover {
     background-color: #01EAAB;
     color: white;
     filter: brightness(85%)
@@ -26,23 +26,26 @@
     color: #01EAAB;
   }
 
-  .btn:active, .btn:visited {
+  .btn:active, .btn:visited, .btn:hover {
     background-color: #01EAAB;
     color: white;
     border: none;
   }
-  .btn:hover{
-    background-color: #01EAAB;
-    color: white;
-    filter: brightness(85%)
-  }
+
 
   .badge-primary {
     background-color: #01EAAB;
   }
 
   .btn-primary {
+    background-color: #01EAAB;
     border: none;
+  }
+
+  .btn-primary:hover, .btn-primary:active {
+    background-color: #01EAAB;
+    color: white;
+    filter: brightness(85%)
   }
 
   /* --- Welcome Page Styles --- */
@@ -71,9 +74,7 @@
   }
 
   h2 {
-    border-bottom: 2px solid #ccc;
     font-size: 24px;
-    line-height: 36px;
     margin-bottom: 16px;
   }
 

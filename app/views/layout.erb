@@ -24,10 +24,13 @@
             <a class="nav-link p-link" href="/">Home</a>
           </li>
           <li class="nav-item">
-            <% if !is_logged_in? %><a class="nav-link p-link" href="/signup">Sign Up</a><% end %>
+            <% if current_user %><a class="nav-link p-link" href="/investments">Investments</a><% end %>
           </li>
           <li class="nav-item">
-            <% if is_logged_in? %><a class="nav-link p-link" href="/account">Account</a><% end %>
+            <% if !is_logged_in? %><a class="nav-link p-link" href="/signup">Sign up</a><% end %>
+          </li>
+          <li class="nav-item">
+            <% if current_user %><a class="nav-link p-link" href="/account">Account</a><% end %>
           </li>
           <li class="nav-item">
             <% if !is_logged_in? %>

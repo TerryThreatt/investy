@@ -48,7 +48,7 @@ class UserController < ApplicationController
     get "/account" do
         validation
         @user = current_user
-        erb :"/users/show"
+        erb :"/users/account"
       end
 
       get "/account/edit" do
