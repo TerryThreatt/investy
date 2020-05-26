@@ -25,7 +25,7 @@ class InvestmentController < ApplicationController
 
     get "/investments/:id" do
         validation
-        @investment = current_user.investments.find(params[:id])
+        @investment = current_user.investments.find_by(id: params[:id])
         if @investment
             erb :"investments/show"
         else

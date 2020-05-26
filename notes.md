@@ -30,7 +30,7 @@
     [] Bonus: display validation failures or error messages
 
 # Stretch Goals
-- CSS/CSS Framework
-- Calculation Feature
-- Type Feature
-- Graphs
+[x]- CSS/CSS Framework
+[]- Calculation Feature
+[x]- Type Feature
+[]- Graphs

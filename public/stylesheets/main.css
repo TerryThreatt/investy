@@ -11,9 +11,10 @@
     width: 100%;
   }
 
-
   a:link, a:visited {
+    background-color: transparent;
     color: #01EAAB;
+    border: none;
   }
 
   a:active, a:hover {
@@ -22,11 +23,14 @@
     filter: brightness(85%)
 
   }
-  .p-link {
-    color: #01EAAB;
+
+  a.btn-primary {
+    background-color: #01EAAB;
+    color: #F8F9FA;
   }
 
-  .btn:active, .btn:visited, .btn:hover {
+
+  .btn:active {
     background-color: #01EAAB;
     color: white;
     border: none;
@@ -37,12 +41,18 @@
     background-color: #01EAAB;
   }
 
-  .btn-primary {
+  .p-link {
+    color: #01EAAB;
+    background: transparent;
+  }
+
+  .btn-primary, .btn-primary:active {
     background-color: #01EAAB;
+    color: white;
     border: none;
   }
 
-  .btn-primary:hover, .btn-primary:active {
+  .btn-primary:hover {
     background-color: #01EAAB;
     color: white;
     filter: brightness(85%)
@@ -51,14 +61,13 @@
   /* --- Welcome Page Styles --- */
   body {
     background-color: #01EAAB;
-    color: #333;
+    color: 333;
     font-family: Helvetica;
     line-height: 18px;
   }
 
   .wrapper {
     background: #01EAAB;
-    ;
     -moz-box-shadow: 0 0 10px rgba(0,0,0,.3);
     -webkit-box-shadow: 0 0 10px rgba(0,0,0,.3);
     box-shadow: 0 0 10px rgba(0,0,0,.3);

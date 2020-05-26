@@ -7,8 +7,11 @@
     <li class="list-group-item">Date: <%= @investment.date%></li>
     <li class="list-group-item">Description: <%= @investment.description %></li>
   </ul>
-  <a href="/investments/<%=@investment.id%>/edit" class="btn btn-primary">Edit</a>
+  <br>
+  <a href="/investments/<%=@investment.id%>/edit" class="btn btn-primary btn-sm"> Edit </a>
+  <br>
+  <br>
   <form action="/investments/<%= @investment.id %>/delete" method="POST">
 		<input id="hidden" type="hidden" name="_method" value="delete">
-		<input type="submit" value="Delete" class="btn btn-primary">
+		<input type="submit" value="Delete" class="btn btn-primary btn-sm align-center">
 	</form>

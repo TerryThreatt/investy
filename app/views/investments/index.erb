@@ -2,11 +2,23 @@
 <br>
 <h2> Investments </h2>
 
-<ul class="list-group">
+<ul class="list-group list-group">
     <% @investments.each do |i| %>
-        <li class="list-group-item"><a href="/investments/<%= i.id %>">Name: <%= i.name %>Type: <%= i.kind %>Amount: $<%= i.amount %>Date: <%= i.date%>Description: <%= i.description %></a></li>
+        <ul class="list-group list-group">
+            <li class="list-group-item"><b><a href="/investments/<%= i.id %>"><%= i.name %></a></b></li>
+            <li class="list-group-item">Type: <%= i.kind %></li>
+            <li class="list-group-item">Amount: $<%= i.amount %>
+            <li class="list-group-item">Date: <%= i.date%></li>
+            <li class="list-group-item">Description: <%= i.description %></li>
+            <li class="list-group-item">
+                <form action="/investments/<%= i.id %>/delete" method="POST">
+		            <input id="hidden" type="hidden" name="_method" value="delete">
+		            <input type="submit" value="Delete" class="btn btn-secondary">
+	            </form>
+            <li>
+        </ul>
+        <br>
     <% end %>
-
 </ul>
 <br>
 <br>
