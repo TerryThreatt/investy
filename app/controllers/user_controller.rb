@@ -3,7 +3,7 @@ class UserController < ApplicationController
     #new user signup
     get "/signup" do
         if !session[:user_id]
-            erb :"users/new"
+            erb :"users/signup"
         else
             redirect to "/investments"
         end
@@ -40,12 +40,9 @@ class UserController < ApplicationController
 
     # logout user
     get "/logout" do
-        if session[:user_id] != nil
-            session.destroy
-            redirect to "/login"
-        else
-            redirect to "/"
-        end
+        session[:user_id] != nil
+        session.destroy
+        redirect to "/"
     end
     # update user
     get "/account" do

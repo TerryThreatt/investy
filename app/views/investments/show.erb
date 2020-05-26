@@ -1,24 +1,24 @@
 <h2><%= @investment.name %></h2>
-  <ul>
-    <li>Type: <%= @investment.kind %></li>
-    <li>Date: <%= @investment.date %></li>
-    <li>Description: <%= @investment.description%></li>
-    <li>Amount: $<%= @investment.amount %></li>
+  <ul class="list-group list-group list-group-horizontal">
+    <li class="list-group-item">Type: <%= @investment.kind %></li>
+    <li class="list-group-item">Date: <%= @investment.date %></li>
+    <li class="list-group-item">Description: <%= @investment.description%></li>
+    <li class="list-group-item">Amount: $<%= @investment.amount %></li>
   </ul>
-  <a href="/investments/<%=@investment.id%>/edit">Edit</a>
+  <a href="/investments/<%=@investment.id%>/edit" class="badge badge-secondary">Edit</a>
   <br>
   <form action="/investments/<%= @investment.id %>/delete" method="POST">
 		<input id="hidden" type="hidden" name="_method" value="delete">
-		<input type="submit" value="Delete">
+		<input type="submit" value="Delete" class="btn btn-secondary">
 	</form>
   <br>
   <br>
 <br>
 
-<a href="/investments/new">Add Investment</a>
+<a href="/investments/new" class="badge badge-secondary">Add Investment</a>
 <br>
-<a href="/">Home</a>
+<a href="/" class="badge badge-secondary">Home</a>
 <br>
-<a href="/account">Account</a>
+<a href="/account" class="badge badge-secondary">Account</a>
 <br>
-<a href="/logout">Log Out</a>
+<a href="/logout" class="badge badge-secondary">Log Out</a>

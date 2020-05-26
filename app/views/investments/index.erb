@@ -1,8 +1,8 @@
 <h1> Investments </h1>
 
-<ul>
+<ul class="list-group list-group-flush">
     <% @investments.each do |i| %>
-        <li><a href="/investments/<%= i.id %>"><%= i.name %>: $<%= i.amount%></a></li>
+        <li class="list-group-item bg-light"><a href="/investments/<%= i.id %>"><%= i.name %>: $<%= i.amount%></a></li>
     <% end %>
 
 </ul>

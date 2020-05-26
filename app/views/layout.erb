@@ -9,24 +9,59 @@
 
     <title>Investy App</title>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
 
-    <link rel="stylesheet" href="/stylesheets/main.css" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="/stylesheets/main.css"/>
+
   </head>
-  <body>
-    <div class="wrapper">
+  <body >
+    <div class="wrapper rounded bg-light text-center">
+
+        <ul class="nav nav-pills justify-content-end">
+          <li class="nav-item">
+            <a class="nav-link p-link" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <% if !is_logged_in? %><a class="nav-link p-link" href="/signup">Sign Up</a><% end %>
+          </li>
+          <li class="nav-item">
+            <% if is_logged_in? %><a class="nav-link p-link" href="/account">Account</a><% end %>
+          </li>
+          <li class="nav-item">
+            <% if !is_logged_in? %>
+              <a class="nav-link" href="/login">Log in</a>
+              <% else %>
+              <a class="nav-link" href="/logout">Log out</a>
+            <% end %>
+          </li>
+        </ul>
+
 
         <%= yield %>
 
-      <footer class="branding">
+      <footer class="branding text-center">
         <small>&copy; 2020 <strong>Investy</strong></small>
+        <br>
+        <small>Made with ☕ by <a id="email" href="https://terrythreatt.github.io" target="_blank">Terry Threatt</a></small><br>
+    <small>
+      <a href="mailto:terry.threatt@gmail.com", class="icon">
+        <img src="/images/email.png" alt="Email logo">
+      </a>
+    </small>
       </footer>
     </div>
 
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-    <!--[if lt IE 7]>
+    <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    [if lt IE 7]>
       <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.2/CFInstall.min.js"></script>
       <script>window.attachEvent("onload",function(){CFInstall.check({mode:"overlay"})})</script>
     <![endif]-->
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
   </body>
 </html>
