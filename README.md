@@ -32,6 +32,9 @@ $ rake db:seed
 * SQLITE3
 * Boostrap
 
+## Deployment
+* [Investy App](https://investy-app.herokuapp.com/) via Heroku
+
 ## Contributing
 
 Please read [CONTRIBUTING.md](https://github.com/terrythreatt) for details on our code of conduct, and the process for submitting pull requests to us.
