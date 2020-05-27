@@ -29,11 +29,8 @@ $ rake db:seed
 
 * Sinatra
 * ActiveRecord
-* SQLITE3
+* Postgres
 * Boostrap
-
-## Deployment
-* [Investy App](https://investy-app.herokuapp.com/) via Heroku
 
 ## Contributing
 
