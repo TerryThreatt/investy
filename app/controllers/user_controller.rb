@@ -13,8 +13,10 @@ class UserController < ApplicationController
         user = User.new(name: params[:name], email: params[:email], password: params[:password])
         if user.save
             session[:user_id] = user.id
+            # flash[:signup_success] = "Hi #{user.name}, you successfully signed up!"
             redirect to "/login"
         else
+            # flash[:signup_failure] = "Your sign-up failed"
             erb :"/users/failure"
         end
     end
