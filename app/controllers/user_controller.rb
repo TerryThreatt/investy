@@ -60,12 +60,13 @@ class UserController < ApplicationController
       end
 
       patch '/account/edit' do
+        validation
         @user = current_user
-        @user.name = params[:first_name]
+        @user.name = params[:name]
         @user.email = params[:email]
         @user.password = params[:password]
         @user.save
-        redirect '/account'
+        redirect "/account"
       end
 
 end
