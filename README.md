@@ -2,6 +2,7 @@
 
 This is an investment portfolio app used to track all your investments in one place.
 
+[Live App](https://investy-app.herokuapp.com/)
 
 ### Installing
 
