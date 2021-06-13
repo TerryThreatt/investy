@@ -13,7 +13,4 @@ test:
 production:
   adapter: postgresql
   database: investy
-  username: postgres
-  password: postgres
-  host: localhost
   pool: 5
