@@ -9,3 +9,4 @@ use Rack::MethodOverride
 use InvestmentController
 use UserController
 run ApplicationController
+run Sinatra::Application
