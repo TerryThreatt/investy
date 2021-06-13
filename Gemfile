@@ -6,6 +6,7 @@ gem 'sinatra-activerecord', :require => 'sinatra/activerecord'
 gem 'rake'
 gem 'require_all'
 gem "pg", '~> 0.21.0'
+gem "sqlite3"
 gem 'thin'
 gem 'shotgun'
 gem 'pry'
