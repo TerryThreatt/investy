@@ -27,6 +27,7 @@ require 'bundler/setup'
  end
 
  configure :production do
+  ENV['SINATRA_ENV'] ||= "production"
   db = URI.parse(ENV['DATABASE_URL'] || 'postgres://localhost/investy')
 
   ActiveRecord::Base.establish_connection(
