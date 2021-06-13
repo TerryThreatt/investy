@@ -13,6 +13,7 @@ gem 'sinatra-flash', '~> 0.3.0'
 gem 'yard'
 gem 'ruby'
 gem 'pg', '~> 0.21.0'
+gem 'bigdecimal', '1.3.5'
 
 group :test, :development do
   gem 'sqlite3', '~> 1.3.6'

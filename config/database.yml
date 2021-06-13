@@ -12,5 +12,6 @@ test:
 
 production:
   adapter: postgresql
-  database: db/investy
+  database: investy
+  host: localhost
   pool: 5
