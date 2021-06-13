@@ -27,7 +27,7 @@
     [x] Belongs_to resource has full crud routes
     [x] Users can't modify other users content
     [x] User input validations
-    [] Bonus: display validation failures or error messages
+    [?] Bonus: display validation failures or error messages
 
 # Stretch Goals
 [x]- CSS/CSS Framework
