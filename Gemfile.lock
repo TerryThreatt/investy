@@ -126,7 +126,7 @@ DEPENDENCIES
   rake
   require_all
   rspec
-  ruby (~> 0.1.0)
+  ruby
   shotgun
   sinatra
   sinatra-activerecord

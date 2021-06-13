@@ -11,7 +11,7 @@ gem 'bcrypt'
 gem 'tux'
 gem 'sinatra-flash', '~> 0.3.0'
 gem 'yard'
-gem 'ruby', "~> 2.6.6"
+gem 'ruby'
 gem 'pg', '~> 0.21.0'
 
 group :test, :development do
