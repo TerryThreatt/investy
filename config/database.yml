@@ -12,5 +12,5 @@ test:
 
 production:
   adapter: postgresql
-  database: catan
+  database: investy
   pool: 5

@@ -27,10 +27,10 @@ require 'bundler/setup'
  end
 
  configure :production do
-  db = URI.parse(ENV['DATABASE_URL'] || 'postgres:///localhost/investy')
+  db = URI.parse(ENV['DATABASE_URL'] || 'postgres://localhost/investy')
 
   ActiveRecord::Base.establish_connection(
-    :adapter  => db.scheme == 'postgres' ? 'postgresql' : db.scheme,
+    :adapter  => 'postgresql',
     :host     => db.host,
     :username => db.user,
     :password => db.password,
