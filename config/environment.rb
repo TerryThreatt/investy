@@ -1,5 +1,5 @@
 require 'bundler/setup'
- Bundler.require
+ Bundler.require(:default, ENV['SINATRA_ENV'])
 
   configure :test do
     ENV['SINATRA_ENV'] ||= "test"
