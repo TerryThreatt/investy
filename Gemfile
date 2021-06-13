@@ -12,9 +12,10 @@ gem 'tux'
 gem 'sinatra-flash', '~> 0.3.0'
 gem 'yard'
 gem 'ruby', "~> 0.1.0"
+gem 'pg', '~> 0.21.0'
 
 group :test, :development do
-  gem 'pg', '~> 0.21.0'
+  gem 'sql', '~> 0.0.1'
   gem 'pry'
 end
 

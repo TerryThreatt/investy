@@ -93,6 +93,7 @@ GEM
       sinatra (>= 1.0)
     sinatra-flash (0.3.0)
       sinatra (>= 1.0.0)
+    sql (0.0.1)
     thin (1.8.1)
       daemons (~> 1.0, >= 1.0.9)
       eventmachine (~> 1.0, >= 1.0.4)
@@ -130,6 +131,7 @@ DEPENDENCIES
   sinatra
   sinatra-activerecord
   sinatra-flash (~> 0.3.0)
+  sql (~> 0.0.1)
   thin
   tux
   yard
