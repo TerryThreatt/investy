@@ -12,8 +12,8 @@ gem 'tux'
 gem 'slim'
 gem 'sinatra-flash', '~> 0.3.0'
 gem 'yard'
-gem 'ruby'
 gem 'bigdecimal', '1.3.5'
+gem 'ruby'
 
 group :production do
   gem 'pg', '~> 0.21.0'
