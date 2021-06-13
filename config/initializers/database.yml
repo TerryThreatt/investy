@@ -12,9 +12,5 @@ test:
 
 production:
   adapter: postgresql
-<<<<<<< HEAD
   database: investy
-=======
-  database: catan
->>>>>>> 153a17dc73e65d20c5f8330020de9d96d41dc4c6
   pool: 5

@@ -1,5 +1,4 @@
 require 'bundler/setup'
-
  Bundler.require
 
   configure :test do
@@ -27,11 +26,13 @@ require 'bundler/setup'
   )
  end
 
+
+
  configure :production do
-  db = URI.parse(ENV['DATABASE_URL'] || 'postgres:///localhost/investy')
+  db = URI.parse(ENV['DATABASE_URL'] || 'postgres://localhost/investy')
 
   ActiveRecord::Base.establish_connection(
-    :adapter  => db.scheme == 'postgres' ? 'postgresql' : db.scheme,
+    :adapter  => 'postgresql',
     :host     => db.host,
     :username => db.user,
     :password => db.password,
@@ -40,5 +41,4 @@ require 'bundler/setup'
   )
  end
 
-require './app/controllers/application_controller'
 require_all 'app'
