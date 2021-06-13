@@ -1,6 +1,10 @@
 require 'bundler/setup'
+<<<<<<< HEAD
 
  Bundler.require
+=======
+ Bundler.require(:default, ENV['SINATRA_ENV'])
+>>>>>>> 9748eb166abfe39a436c93d2affa279dce060036
 
   configure :test do
     ENV['SINATRA_ENV'] ||= "test"
@@ -28,7 +32,8 @@ require 'bundler/setup'
  end
 
  configure :production do
-  db = URI.parse(ENV['DATABASE_URL'] || 'postgres:///localhost/investy')
+  ENV['SINATRA_ENV'] ||= "production"
+  db = URI.parse(ENV['DATABASE_URL'] || 'postgres://localhost/investy')
 
   ActiveRecord::Base.establish_connection(
     :adapter  => db.scheme == 'postgres' ? 'postgresql' : db.scheme,

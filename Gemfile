@@ -16,11 +16,15 @@ gem 'tux'
 gem 'slim'
 gem 'sinatra-flash', '~> 0.3.0'
 gem 'yard'
-gem 'ruby', "~> 0.1.0"
-gem 'pg', '~> 0.21.0'
+gem 'ruby'
+gem 'bigdecimal', '1.3.5'
+
+group :production do
+  gem 'pg', '~> 0.21.0'
+end
 
 group :test, :development do
-  gem 'sql', '~> 0.0.1'
+  gem 'sqlite3', '~> 1.3.6'
   gem 'pry'
 end
 
