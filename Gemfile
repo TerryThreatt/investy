@@ -14,7 +14,7 @@ gem 'sinatra-flash', '~> 0.3.0'
 gem 'yard'
 
 group :test, :development do
-  gem 'sqlite3', '~> 1.3.6'
+  gem 'sqlite3', '~> 1.3.13'
   gem 'rspec'
   gem 'pry'
   gem 'capybara'
