@@ -15,7 +15,7 @@ gem 'ruby'
 gem 'pg', '~> 0.21.0'
 
 group :test, :development do
-  gem 'sql', '~> 0.0.1'
+  gem 'sqlite3', '~> 1.3.6'
   gem 'pry'
 end
 

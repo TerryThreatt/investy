@@ -13,9 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20200523182049) do
 
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-
   create_table "investments", force: :cascade do |t|
     t.string   "name"
     t.date     "date"
