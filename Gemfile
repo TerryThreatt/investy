@@ -19,7 +19,6 @@ end
 
 group :test do
   gem 'rspec'
-  gem 'pry'
   gem 'capybara'
   gem 'rack-test'
   gem 'database_cleaner'
