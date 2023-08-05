@@ -7,7 +7,7 @@ This is an investment portfolio app used to track all your investments in one pl
 ### Installing
 
 Getting Started:
-execute these commands in the terminal
+execute these commands in the terminal.
 
 ```
 $ git clone https://github.com/TerryThreatt/investy.git
