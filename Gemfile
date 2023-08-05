@@ -13,7 +13,7 @@ gem 'foreman'
 gem 'sinatra-flash', '~> 0.3.0'
 gem 'yard'
 gem 'bigdecimal', '1.3.5'
-gem 'ruby'
+gem 'ruby', '~> 3.1.0'
 
 group :production do
   gem 'pg', '~> 0.21.0'
